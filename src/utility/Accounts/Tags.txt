@@ -1,0 +1,10 @@
+Tags_Routes
+
+1.  Fetching All Tags:
+
+    GraphQL Query: GET_ALL_TAGS
+    REST Route: /tags
+    HTTP Method: GET
+
+// Get_all_Tags       ____DONE____
+router.get("/tags", GetAllTags)    

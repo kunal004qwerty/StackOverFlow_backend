@@ -1,0 +1,6 @@
+export * from './admin.routes.js'
+export * from './user.routes.js'
+export * from './posts.routes.js'
+export * from './tags.routes.js'
+export * from './comment.routes.js'
+export * from './answer.routes.js'

@@ -1,0 +1,56 @@
+Answer_Routes
+
+1.  Posting an Answer:
+
+    GraphQL Mutation: POST_ANSWER
+    REST Route: /questions/:quesId/answers
+    HTTP Method: POST
+    Request Parameters: quesId (as part of the URL)
+    Request Body: { "body": "..." }
+
+
+    // Post_Answer  . ____DONE____
+    router.post("/answer", Authenticate, Add_Answer)
+      Request Body: { "quesId": "...", "body": "..." }
+
+
+2.  Deleting an Answer:
+
+    GraphQL Mutation: DELETE_ANSWER
+    REST Route: /questions/:quesId/answers/:ansId
+    HTTP Method: DELETE
+    Request Parameters: quesId and ansId (as part of the URL)      
+
+    // Delete_answer     . ____DONE____
+    router.delete("/answer",Authenticate, Delete_Answer)
+     Request Body: { "quesId": "...", "body": "..." }
+
+
+3 .Updating an Answer:
+
+    GraphQL Mutation: EDIT_ANSWER
+    REST Route: /questions/:quesId/answers/:ansId
+    HTTP Method: PUT
+    Request Parameters: quesId and ansId (as part of the URL)
+    Request Body: { "body": "..." }     
+
+    // Edit_Answer   . ____DONE____
+    router.patch("/answer", Authenticate, Edit_Answer)
+   Request Body: { "quesId": "...", "ansId":"...", "body": "..." }
+
+4. Voting on an Answer:
+
+    GraphQL Mutation: VOTE_ANSWER
+    REST Route: /questions/:quesId/answers/:ansId/vote
+    HTTP Method: POST
+    Request Parameters: quesId and ansId (as part of the URL)
+    Request Body: { "voteType": "UPVOTE" or "DOWNVOTE" }
+
+    // Vote_Answer  . ____DONE____
+    router.post('/answer/vote',Authenticate, Vote_Answer)
+
+
+
+
+https://chat.openai.com/share/44181212-25d2-4eb5-8bd7-d3305dc0e098
+https://chat.openai.com/share/959fe18c-994c-46e8-b04e-b28a47ac327c

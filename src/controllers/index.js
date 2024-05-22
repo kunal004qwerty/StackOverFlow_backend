@@ -1,0 +1,8 @@
+export * from './admin.controller.js'
+export * from './user.controller.js'
+export * from './post.controller.js'
+export * from './tag.controller.js'
+// export * from './postComment.controller.js'
+export * from './postComment.controller.js'
+export * from './answerComment.controller.js'
+export * from './answer.controller.js'

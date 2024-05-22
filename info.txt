@@ -1,0 +1,46 @@
+It's is a stackOverflowClone
+
+// dependenies
+npm i express
+npm i mongoose
+npm i nodemon  (optional)
+npm i dotenv
+npm i jsonwebtojoken
+npm i bcrypt (for password hashing)
+
+<------------ routes ---------------> 
+
+admin--> 
+01. Resgister/ SignUp      --done
+02. Get_All_User           --done
+03. Get_User_By_Id          --done
+
+user-->
+01. Login/Sign_In   (generate Token for authentifiacation) --done
+// --- after authentifiaction -- //
+02. Get_User_Profile            --done
+03. Update_User_Profile         --done
+
+post-->
+01. post_Post                   --done // /field may be not get updated
+02. Get_All_Posts               --halfdone // pagination and more
+03. Get_Post_By_Id              --done 
+04. Get_Top_Posts
+05. Get_Post_By_TagName
+06. Delete_Post_By_Id            --done
+07. Edited_post_by_Id             --done // field may be not get updated
+08. postVote                    -- done
+
+tags-->
+01. Get_All_Tags
+02. Get_tags_By_tagName
+
+Answer-->
+01.  Post_PostAnswer_by_id
+02.  Get_PostAnswer_By_Id
+03.  Delete_PostAnswer_By_Id
+
+Comments-->
+01. Post_PostComment_by_id
+02. Get_PostComment_by_id
+03. Delete_PostComment_By_Id

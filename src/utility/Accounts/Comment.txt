@@ -1,0 +1,56 @@
+Comment_routes
+
+
+1. Posting a Question Comment:
+
+    GraphQL Mutation: ADD_QUES_COMMENT
+    REST Route: /questions/:quesId/comments
+    HTTP Method: POST
+    Request Parameters: quesId (as part of the URL)
+    Request Body: { "body": "..." }
+
+    // add_commnet_On_post
+    router.post('/post/comment', Authenticate, AddPostComment)
+    Request Body: { "quesId" : "...", "body" : "..." }
+
+2. Updating a Question Comment:
+
+    GraphQL Mutation: EDIT_QUES_COMMENT
+    REST Route: /questions/:quesId/comments/:commentId
+    HTTP Method: PUT
+    Request Parameters: quesId and commentId (as part of the URL)
+    Request Body: { "body": "..." }    
+
+    // Edit_comment_On_Post
+    router.patch("/answer", Authenticate, Edit_Answer)
+    Request Body: { "body" : "..." }
+
+3. Deleing a question Comment    
+
+    GraphQL Mutation: DELETE_QUES_COMMENT
+    REST Route: /questions/:quesId/comments/:commentId
+    HTTP Method: DELETE
+    Request Parameters: quesId and commentId (as part of the URL)
+
+4.  Posting an Answer Comment:
+
+    GraphQL Mutation: ADD_ANS_COMMENT
+    REST Route: /questions/:quesId/answers/:ansId/comments
+    HTTP Method: POST
+    Request Parameters: quesId and ansId (as part of the URL)
+    Request Body: { "body": "..." }    
+
+5 .Deleting an Answer Comment:
+
+    GraphQL Mutation: DELETE_ANS_COMMENT
+    REST Route: /questions/:quesId/answers/:ansId/comments/:commentId
+    HTTP Method: DELETE
+    Request Parameters: quesId, ansId, and commentId (as part of the URL)    
+
+6. Updating an Answer Comment:
+
+    GraphQL Mutation: EDIT_ANS_COMMENT
+    REST Route: /questions/:quesId/answers/:ansId/comments/:commentId
+    HTTP Method: PUT
+    Request Parameters: quesId, ansId, and commentId (as part of the URL)
+    Request Body: { "body": "..." }    

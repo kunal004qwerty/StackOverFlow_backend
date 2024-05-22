@@ -1,0 +1,67 @@
+Question_Routes
+
+1. Fetching Questions:
+
+    GraphQL Query: GET_QUESTIONS    
+    REST Route: /questions
+    HTTP Method: GET
+    Request Parameters: sortBy, page, limit, filterByTag, filterBySearch
+
+    // Get_all_Post          .            ____DONE____
+    router.get("/post", GetAllPost)
+
+2. Viewing a Question:
+
+    GraphQL Query: VIEW_QUESTION
+    REST Route: /questions/:quesId
+    HTTP Method: GET
+    Request Parameters: quesId (as part of the URL)    
+
+    // Get_Post_By_id              .       ____DONE____
+    router.get("/post/:id", PostById) 
+
+3. Posting a Question:
+
+    GraphQL Mutation: POST_QUESTION
+    REST Route: /questions
+    HTTP Method: POST
+    Request Body: { "title": "...", "body": "...", "tags": ["...", "..."] }    
+
+    // post_a_question           .        ____DONE____
+    router.post("/post",Authenticate, AddPost)
+    Request Body: { "title": "...", "body": "...", "tags": ["...", "..."] }    
+
+
+4.  Updating a Question:
+
+    GraphQL Mutation: EDIT_QUESTION
+    REST Route: /questions/:quesId  
+    HTTP Method: PUT
+    Request Parameters: quesId (as part of the URL)
+    Request Body: { "title": "...", "body": "...", "tags": ["...", "..."] }
+
+    // Edit_question           .              ____DONE____
+    router.patch("/post/:id",Authenticate, EditPostById)
+    Request Body: { "quesId":"...", "title": "...", "body": "...", "tags": ["...", "..."] }
+
+
+5.  Deleting a Question:
+
+    GraphQL Mutation: DELETE_QUESTION
+    REST Route: /questions/:quesId
+    HTTP Method: DELETE
+    Request Parameters: quesId (as part of the URL)
+
+    // delete_Question      .                ____DONE____
+    router.delete("/post/:id", Authenticate, DeletePostById)
+
+6 .Voting on a Question:
+
+    GraphQL Mutation: VOTE_QUESTION
+    REST Route: /questions/:quesId/vote
+    HTTP Method: POST
+    Request Parameters: quesId (as part of the URL)
+    Request Body: { "voteType": "UPVOTE" or "DOWNVOTE" }    
+
+    // VOTE_QUESTION           .                ____DONE____
+    router.post("/post/vote",Authenticate, VoteQuestion)

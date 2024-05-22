@@ -1,0 +1,57 @@
+User_Routes
+
+1.  Fetching User Details:
+
+    GraphQL Query: GET_USER
+    REST Route: /users/:username
+    HTTP Method: GET
+    Request Parameters: username (as part of the URL)
+
+    // get_user_by_id  ____DONE 
+    router.get('/user/:id', GetuserById)      
+
+2.  Fetching All Users:
+
+    GraphQL Query: GET_ALL_USERS
+    REST Route: /users
+    HTTP Method: GET    
+
+    // get_all_user  ____DONE
+    router.get("/users", GetAllUser)
+
+3.  Registering a User:
+
+    GraphQL Mutation: REGISTER_USER
+    REST Route: /users/register
+    HTTP Method: POST
+    Request Body: { "username": "...", "password": "..." }    
+
+    //  create_user  ____DONE
+    router.post("/user", Register)
+    Request Body: { "name": "...", "email":"...", "password": "..." } 
+
+4. Logging in a User:
+
+    GraphQL Mutation: LOGIN_USER
+    REST Route: /users/login
+    HTTP Method: POST
+    Request Body: { "username": "...", "password": "..." }    
+
+    // Login_user            ____DONE
+    router.post('/login', UserLogin)
+    Request Body: { "email": "...", "password": "..." }    
+
+5. Fetching Logged-In User Details:
+
+    GraphQL Query: LOGGED_USER_DETAILS
+    REST Route: /user
+    HTTP Method: GET (assuming this route retrieves the details of the logged-in user)    
+
+    // GEt_User_Profile          ____DONE
+    router.get('/profile',Authenticate, GetUserProfile)
+
+
+6. Update User Credential           
+
+    router.patch('/profile',Authenticate, UpdateUserProfile)        ____DONE____
+     Request Body: { "name": "...", "city": "...", "work":"...", "desc","..." }   
